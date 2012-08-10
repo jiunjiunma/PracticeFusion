@@ -59,4 +59,4 @@ rf_result <- predict.gbm(object = GBM_model
 myPred <- data.frame(test$PatientGuid, rf_result)
 colnames(myPred) <- c("PatientGuid", "dmIndicator")
 myPred$dmIndicator[myPred$dmIndicator < 0] = 0
-write.table(myPred, "sample.csv", sep=',', row.names=FALSE, quote=TRUE, col.names=FALSE)
+write.table(myPred[order(myPred$PatientGuid),], "sample.csv", sep=',', row.names=FALSE, quote=TRUE, col.names=FALSE)
