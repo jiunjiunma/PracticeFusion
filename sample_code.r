@@ -23,8 +23,8 @@ con <- dbConnect(n, dbname="compData.db")
 
 # ================================================================================= #
 # Create dataset with (Ndx, Nmeds, Nlabs) = (2,5,3)
-train <- create_flattenedDataset(con, "training", 2, 5, 3)
-test <- create_flattenedDataset(con, "test", 2, 5, 3)
+train <- create_flattenedDataset(con, "training", 15, 5, 3)
+test <- create_flattenedDataset(con, "test", 15, 5, 3)
 
 
 # ================================================================================= #
